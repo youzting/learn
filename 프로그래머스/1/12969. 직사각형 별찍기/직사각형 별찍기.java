@@ -5,16 +5,14 @@ class Solution {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
-        String[][] stars = new String[b][a];
-        
-        for(int i = 0; i < stars.length; i++){
-            for(int j = 0; j < stars[i].length; j++){
-                stars[i][j] = "*";
-                System.out.print(stars[i][j]);
-            }
-            System.out.println();
+
+        String line = "*".repeat(a);
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < b; i++) {
+            sb.append(line).append("\n");
         }
 
-        
+        System.out.print(sb);
     }
 }
